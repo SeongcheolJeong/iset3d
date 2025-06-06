@@ -32,3 +32,7 @@ To see some examples, have a look at the tutorial directory. If you want to read
 Note: This repository was formerly ISET3d-v4, pbrt2iset, and before that we relied on RenderToolbox4.
 
 ISET3d was originally developed in Brian Wandell's [Vistalab group](https://vistalab.stanford.edu/) at [Stanford University](stanford.edu), along with co-contributors from other research institutions and industry.
+
+## Experimental Python Port
+
+A very small subset of ISET3d is being reimplemented in Python under the `python/` directory. This effort is experimental and currently provides only basic recipe management and a simple Docker wrapper.
