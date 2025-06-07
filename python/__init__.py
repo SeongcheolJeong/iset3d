@@ -1,5 +1,5 @@
-"""Simple helpers for working with PBRT."""
+"""Deprecated access point for PBRT helpers. Use the `iset3d` package instead."""
 
-from .pbrt_wrapper import PBRTWrapper
+from iset3d import PBRTWrapper
 
 __all__ = ["PBRTWrapper"]
