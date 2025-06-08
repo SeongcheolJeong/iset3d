@@ -18,4 +18,16 @@ dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["."]
+exclude = [
+    "data*",
+    "examples*",
+]
+
+[tool.setuptools.package-data]
+"" = [
+    "data/scenes/SimpleScene/**",
+    "data/scenes/MacBethChecker/**",
+    "data/scenes/CornellBoxReference/**",
+    "data/scenes/testplane/dgauss.22deg.3.0mm.json",
+]
 

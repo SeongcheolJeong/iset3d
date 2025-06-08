@@ -14,3 +14,13 @@ wrapper = PBRTWrapper("/usr/local/bin/pbrt")
 wrapper.run("scene.pbrt", "output.exr")
 ```
 
+## Sample data
+
+The Python package installs a few small scenes so that the examples work
+out of the box.  They can be located with ``importlib.resources``:
+
+```python
+from importlib import resources
+simple = resources.files("iset3d").joinpath("data/scenes/SimpleScene")
+``` 
+
