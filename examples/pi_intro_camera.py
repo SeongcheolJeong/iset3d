@@ -1,4 +1,5 @@
 from pathlib import Path
+from importlib import resources
 
 from iset3d import Recipe, PBRTWrapper
 
@@ -12,7 +13,9 @@ def main(pinhole_file='camera_pinhole.exr', omni_file='camera_omni.exr'):
     """
 
     # Create recipe for the SimpleScene example
-    scene_file = Path('data/scenes/SimpleScene/SimpleScene.pbrt')
+    scene_file = resources.files("iset3d").joinpath(
+        "data/scenes/SimpleScene/SimpleScene.pbrt"
+    )
     recipe = Recipe.create(name='SimpleScene')
     recipe.set('input file', scene_file)
 
