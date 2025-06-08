@@ -35,8 +35,9 @@ def main(pinhole_file='camera_pinhole.exr', omni_file='camera_omni.exr'):
     recipe.set('rendered file', pinhole_file)
     print(f"Rendered pinhole camera to {pinhole_file}")
 
-    # Switch to omni camera with lens
-    lensfile = 'dgauss.22deg.6.0mm.json'
+    # Switch to omni camera with lens.  Use a lens that exists in the repo
+    # so the example runs without requiring additional assets.
+    lensfile = 'data/scenes/testplane/dgauss.22deg.3.0mm.json'
     recipe.set('camera', {'type': 'omni', 'lensfile': lensfile})
     recipe.set('output file', omni_file)
 
