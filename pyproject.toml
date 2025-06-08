@@ -9,11 +9,12 @@ description = "Utilities for ISET3D and PBRT"
 authors = [{name = "ISET3D Team"}]
 license = {text = "MIT"}
 requires-python = ">=3.8"
-dependencies = [
-    "numpy",
-    "scipy",
-    "imageio",
-]
+# This project has no mandatory Python dependencies.  The previous
+# configuration listed packages like NumPy, SciPy and ImageIO, but none of
+# them are actually imported in the ``iset3d`` package or the example
+# scripts.  Removing these unused dependencies keeps the installation
+# lightweight and avoids pulling in large libraries unnecessarily.
+dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["."]
