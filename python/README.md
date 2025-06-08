@@ -14,8 +14,3 @@ wrapper = PBRTWrapper("/usr/local/bin/pbrt")
 wrapper.run("scene.pbrt", "output.exr")
 ```
 
-## Using Docker
-
-The optional `DockerWrapper` relies on the local Docker installation to run PBRT
-inside a container.  If Docker is unavailable or undesired, use
-`PBRTWrapper` as shown above.
