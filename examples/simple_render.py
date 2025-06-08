@@ -1,4 +1,5 @@
 from pathlib import Path
+from importlib import resources
 
 from iset3d import Recipe, PBRTWrapper
 
@@ -6,7 +7,9 @@ from iset3d import Recipe, PBRTWrapper
 def main(output_file='simple_render.exr'):
     """Render the SimpleScene example using PBRTWrapper."""
     # Prepare recipe information
-    scene_file = Path('data/scenes/SimpleScene/SimpleScene.pbrt')
+    scene_file = resources.files("iset3d").joinpath(
+        "data/scenes/SimpleScene/SimpleScene.pbrt"
+    )
     recipe = Recipe.create(name='SimpleScene')
     recipe.set('input file', scene_file)
     recipe.set('output file', output_file)
